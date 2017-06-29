@@ -17,18 +17,24 @@ function outputUpdate1(vol) {
 function outputUpdate(vol) {
   $('#output2').val(vol)
 }
-$('#movieButton').click(function(event){
+$('#movieButton').click(function(event) {
   event.preventDefault()
+  $('#movieButton').css({
+    "display": "none"
+  })
   $('#title').fadeIn(2000)
   $('#plot').fadeIn(2000)
-  $('#movieButton').fadeOut()
+
 })
-$('#hikeButton').click(function(event){
+$('#hikeButton').click(function(event) {
   event.preventDefault()
+  $('#hikeButton').css({
+    "display": "none"
+  })
   $('.hike-city').fadeIn(2000)
   $('.hike-dir').fadeIn(2000)
   $('.hike-dis').fadeIn(2000)
-  $('#hikeButton').fadeOut()
+
 })
 
 function random(z) {
@@ -46,6 +52,8 @@ $("#click").click(function(event) {
   $('.hike-dis').fadeOut(200)
   $('#title').fadeOut(200)
   $('#plot').fadeOut(200)
+  $('#hikeButton').css({"display": "none"})
+  $('#movieButton').css({"display": "none"})
   let search = $('#input').val()
   let state = $('#select').val() + "/"
   $.get("https://api.wunderground.com/api/b8e89189564dabc3/conditions/q/" + state + search + ".json", function(temp) {
@@ -76,18 +84,22 @@ $("#click").click(function(event) {
           xhr.setRequestHeader("X-Mashape-Authorization", "V0cTRTFthjmshonUdVPvTkRidDMzp1Vr23ijsnS8nYY5lFxnRn");
         }
       })
-      if ($('.temp_f')[0].innerText < lowTemp || $('.temp_f')[0].innerText >= highTemp) {
-        $('.movieLoad').fadeOut(-5000)
+      if ($('.temp_f')[0].innerText <= lowTemp || $('.temp_f')[0].innerText > highTemp) {
+        $('.movieLoad').fadeOut()
         $('#title').fadeIn(2000)
         $('#plot').fadeIn(2000)
-        $('.hikeLoad').fadeout()
-        $('#hikeButton').fadeIn(2000)
+        $('.hikeLoad').css({
+          "display": "none"
+        })
+        $('#hikeButton').fadeIn()
       } else {
         $('.hike-city').fadeIn(2000)
         $('.hike-dir').fadeIn(2000)
         $('.hike-dis').fadeIn(2000)
-        $('.movieLoad').fadeOut()
-        $('#movieButton').fadeIn(2000)
+        $('.movieLoad').css({
+          "display": "none"
+        })
+        $('#movieButton').fadeIn()
       }
     })
   $.get("https://www.omdbapi.com/?apikey=c5a8df09&t=" + movies[random(19)], function(movie) {

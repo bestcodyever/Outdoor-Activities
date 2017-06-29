@@ -12,7 +12,9 @@ body {
 .hike-dis {
   display: none;
 }
+.card-block{
 
+}
 #title {
   display: none;
 }
@@ -95,5 +97,9 @@ body {
 .movieLoad {
   display: none;
   height: 15vh;
+
+}
+#boot {
+width: 20vw;
 
 }

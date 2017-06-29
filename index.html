@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,12 +9,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
   <nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background: linear-gradient(rgba(211, 211, 211, 0.4), rgba(255, 255, 255, .4)">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <p class="navbar-brand-white" href="#" disabled style="opacity: 1;"font-size: 3em;></a>
+    <p class="navbar-brand-white" href="#" disabled style="opacity: 1;" font-size: 3em;>
+      </a>
       <h1>W2D?</h1>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -29,7 +32,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <label for="select" style="margin-right: .2em;">Pick a State</label>
-          <select id="select"  class="select" name="state" style="margin-right: .2em; height: 2.2em;">
+          <select id="select" class="select" name="state" style="margin-right: .2em; height: 2.2em;">
           <option value="AL">Alabama</option>
         	<option value="AK">Alaska</option>
         	<option value="AZ">Arizona</option>
@@ -87,70 +90,70 @@
         </form>
       </div>
   </nav>
-<header class="head2" style="background: rgba(211, 211, 211, 0.2); border: none;margin-bottom: -.5em;text-align: center;">
-  <h3>Enter your current city for activities based on the weather.</h3>
-</header>
+  <header class="head2" style="background: rgba(211, 211, 211, 0); border: none;margin-bottom: -.5em;text-align: center;">
+    <h3>Enter your current city for activities based on the weather.</h3>
+  </header>
   <main>
     <div class="card-group">
-      <div class="card" style="background: rgba(211, 211, 211, 0.2); border: none;">
+      <div class="card" style="background: rgba(211, 211, 211, 0); border: none;">
         <img class="card-img-top" src="movie.png" style="width: 10vw;margin-bottom: 5em; " alt="Card image cap">
         <div class="card-block">
           <h4 id="title" class="card-title"></h4>
           <p id="plot" class="card-text"></p>
           <img id="poster" src="" alt="">
           <div class="buttonDiv">
-            <img class="movieLoad" src="loading.gif" alt="">
-          <a href="#" class="myButton" id="movieButton">Show Movie</a>
-        </div>
+            <img class="movieLoad" src="loading.gif" alt="" style="margin-top: 2em;">
+            <a href="#" class="myButton" id="movieButton">Show Movie</a>
+          </div>
         </div>
       </div>
-      <div class="card" style="background: rgba(211, 211, 211, 0.2);  border: none;">
-        <img class="card-img-top" src="https://s3.amazonaws.com/mashape-production-logos/apis/53aa3bcfe4b0a705fcc30dc5_medium" style="width: 10vw;margin-top: .5em;  " alt="Card image cap">
-
-          <hr>
-        <div class="card-block">
+      <div class="card" style="background: rgba(211, 211, 211, 0);  border: none;">
+        <img id="boot" class="card-img-top" src="http://my-waterfront.ca/wp/wp-content/themes/my-waterfront/img/hiking-icon.png" style="width: 9vw;margin-top: 1em;background: rgba(211, 211, 211,)" alt="Card image cap">
+        <div class="card-block" style="margin-top: -1em;">
           <h4 class="card-title"></h4>
-          <p class="hike-city" class="card-text"></p>
+          <p class="hike-city" class="card-text" style="font-size: 1.5em;"></p>
           <p class="hike-dir" class="card-text"></p>
-          <img class="hike-dis" src="" alt="" style="width: 15vw;">
-        <div class="buttonDiv">
-          <img class="hikeLoad" src="loading.gif" alt="">
-          <a href="#" class="myButton" id="hikeButton">Show Hike</a>
-        </div>
+          <img class="hike-dis" src="" alt="" style="width: 20vw;">
+          <div class="buttonDiv">
+            <img class="hikeLoad" src="loading.gif" alt="">
+
+            <a href="#" class="myButton" id="hikeButton">Show Hike</a>
+          </div>
         </div>
       </div>
-      <div class="card" style="background: rgba(211, 211, 211, 0.2  ); border: none;">
+      <div class="card" style="background: rgba(211, 211, 211, 0  ); border: none;">
         <img class="card-img-top" src="https://cdn4.iconfinder.com/data/icons/weather-conditions/512/hot_temperature-512.png" style="width: 10vw; margin-top: .5em; " alt="Card image cap">
-        <div class="card-block">
+        <div class="card-block" style="margin-top: 4em;">
           <h4 class="city" class="card-title"></h4>
           <p class="temp_f" class="card-text"></p>
-            <form class="" action="index.html" method="post">
-                <p>Adjust Temp range for Outdoor activities.</p>
-                  <article class="rangeOutdoors">
-                    <label id="minLabel"for="minTemp">Min Temp </label>
-                    <input type="range" default="50" id="minTemp" name="minTemp" min="-30" max="50" step="1" oninput="outputUpdate1(value)">
-                    <output for="minTemp" id="output1">10</output>
-                    <br>
-                  </article>
-                  <article class="rangeOutdoors">
-                    <label id="maxLabel" for="maxTemp">Max Temp </label>
-                    <input type="range" default="85" name="maxTemp" id=maxTemp min="50" max="125" step="1" oninput="outputUpdate(value)">
-                    <output type="text" id="output2" value="">85</output>
-                  </article>
-           </form>
+          <form class="" action="index.html" method="post">
+            <p>Adjust Temp range for Outdoor activities.</p>
+            <article class="rangeOutdoors">
+              <label id="minLabel" for="minTemp">Min Temp </label>
+              <input type="range" default="50" id="minTemp" name="minTemp" min="-30" max="50" step="1" oninput="outputUpdate1(value)">
+              <output for="minTemp" id="output1">10</output>
+              <br>
+            </article>
+            <article class="rangeOutdoors">
+              <label id="maxLabel" for="maxTemp">Max Temp </label>
+              <input type="range" default="85" name="maxTemp" id="maxTemp" min="50" max="125" step="1" oninput="outputUpdate(value)">
+              <output type="text" id="output2" value="">88</output>
+            </article>
+          </form>
         </div>
       </div>
       <div class="space">
 
       </div>
   </main>
-  <nav class="navbar fixed-bottom navbar-light bg-faded" style="background: linear-gradient(rgba(211, 211, 211, 0.2), rgba(255, 255, 255, .2));margin-top: 5em;">
+  <nav class="navbar fixed-bottom navbar-light bg-faded" style="background: linear-gradient(rgba(211, 211, 211, 0.4), rgba(255, 255, 255, .2));margin-top: 5em;">
     <p id="copy">© 2017 W2D. All Rights Reserved</p>
   </nav>
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script src="app.js" charset="utf-8"></script>
-</head>
+  </head>
 </body>
+
 </html>

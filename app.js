@@ -36,7 +36,7 @@ $('#hikeButton').click(function(event) {
 function random(z) {
   return Math.floor(Math.random() * z)
 }
-const trailRandom = random(4)
+
 const movies = ['star+wars', 'empire+strikes+back', 'return+of+the+jedi', 'the+phantom+menace', 'attack+of+the', 'revenge+of+the+sith', 'the+force+awakens', 'raiders+of+the+lost', 'temple+of+doom', 'indiana+jones+and+the+last+crusade', 'kingdom+of+the', 'friends+with+', 'white+chicks', 'no+strings+attached', 'good+will+hunting', 'robin+hood+prince', 'frozen', 'eurotrip', 'mean+girls', 'gump']
 
 $("#click").click(function(event) {
@@ -67,6 +67,7 @@ $("#click").click(function(event) {
         data: {},
         dataType: 'json',
         success: function(data) {
+          let trailRandom = random(4)
           $('.hikeLoad').fadeOut()
           $('.hike-city').html(data.places[trailRandom].name + ' Trail.')
           $('.hike-dir').html(data.places[trailRandom].directions)

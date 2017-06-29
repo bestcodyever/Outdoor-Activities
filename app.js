@@ -19,18 +19,14 @@ function outputUpdate(vol) {
 }
 $('#movieButton').click(function(event) {
   event.preventDefault()
-  $('#movieButton').css({
-    "display": "none"
-  })
+  $('#movieButton').css({"display": "none"})
   $('#title').fadeIn(2000)
   $('#plot').fadeIn(2000)
 
 })
 $('#hikeButton').click(function(event) {
   event.preventDefault()
-  $('#hikeButton').css({
-    "display": "none"
-  })
+  $('#hikeButton').css({"display": "none"})
   $('.hike-city').fadeIn(2000)
   $('.hike-dir').fadeIn(2000)
   $('.hike-dis').fadeIn(2000)
@@ -75,9 +71,6 @@ $("#click").click(function(event) {
           $('.hike-city').html(data.places[trailRandom].name + ' Trail.')
           $('.hike-dir').html(data.places[trailRandom].directions)
           $('.hike-dis').attr('src', data.places[trailRandom].activities[0].thumbnail)
-
-
-
         },
         error: function(err) {},
         beforeSend: function(xhr) {
@@ -88,17 +81,13 @@ $("#click").click(function(event) {
         $('.movieLoad').fadeOut()
         $('#title').fadeIn(2000)
         $('#plot').fadeIn(2000)
-        $('.hikeLoad').css({
-          "display": "none"
-        })
+        $('.hikeLoad').css({"display": "none"})
         $('#hikeButton').fadeIn()
       } else {
         $('.hike-city').fadeIn(2000)
         $('.hike-dir').fadeIn(2000)
         $('.hike-dis').fadeIn(2000)
-        $('.movieLoad').css({
-          "display": "none"
-        })
+        $('.movieLoad').css({"display": "none"})
         $('#movieButton').fadeIn()
       }
     })

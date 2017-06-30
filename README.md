@@ -9,3 +9,5 @@ Results are based on current weather in the city you type.
 
 Temperature range..❄️🔥  
 Range has a default of 10-88. Slide range slider for different range.
+
+![image](/ScreenShot.png "Preview")

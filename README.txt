@@ -1,4 +1,4 @@
-W2D..what todo 
+W2D..what to do 
 Web application that gives you an activity based on the weather in the input city.
 
 Search..

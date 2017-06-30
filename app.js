@@ -32,6 +32,19 @@ $('#hikeButton').click(function(event) {
   $('.hike-dis').fadeIn(2000)
 
 })
+function reset(){
+  $('.movieLoad').fadeIn(200)
+  $('.hikeLoad').fadeIn(200)
+  $('.hike-city').html('')
+  $('.hike-dir').html('')
+  $('.hike-dis').attr('src', '')
+  $('#title').css({"display": "none"})
+  $('#plot').css({"display": "none"})
+  $('#title').html('')
+  $('#plot').html('')
+  $('#hikeButton').css({"display": "none"})
+  $('#movieButton').css({"display": "none"})
+}
 
 function random(z) {
   return Math.floor(Math.random() * z)
@@ -41,15 +54,7 @@ const movies = ['star+wars', 'empire+strikes+back', 'return+of+the+jedi', 'the+p
 
 $("#click").click(function(event) {
   event.preventDefault()
-  $('.movieLoad').fadeIn(200)
-  $('.hikeLoad').fadeIn(200)
-  $('.hike-city').html('')
-  $('.hike-dir').html('')
-  $('.hike-dis').attr('src', '')
-  $('#title').html('')
-  $('#plot').html('')
-  $('#hikeButton').css({"display": "none"})
-  $('#movieButton').css({"display": "none"})
+  reset()
   let search = $('#input').val()
   let state = $('#select').val() + "/"
   $.get("https://api.wunderground.com/api/b8e89189564dabc3/conditions/q/" + state + search + ".json", function(temp) {

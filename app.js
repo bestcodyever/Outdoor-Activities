@@ -52,7 +52,7 @@ $("#click").click(function(event) {
   }).then(function(url) {
     let lat = url.current_observation.display_location.latitude
     let lon = url.current_observation.display_location.longitude
-    var trailUrl = 'https://trailapi-trailapi.p.mashape.com/?lat=' + lat + '&lon=' + lon +
+    let trailUrl = 'https://trailapi-trailapi.p.mashape.com/?lat=' + lat + '&lon=' + lon +
      '&q[activities_activity_type_name_eq]=hiking&radius=45'
     $.ajax({
       url: trailUrl,
